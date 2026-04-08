@@ -41,7 +41,7 @@ const experiences = [
 ]
 
 const formations = [
-  { title: "Master 1 Informatique",   school: "Ynov Campus — Montpellier", period: "2025 — 2026", detail: "Full Stack · Architecture logicielle · DevOps" },
+  { title: "Mastère 1 Informatique",   school: "Ynov Campus — Montpellier", period: "2025 — 2026", detail: "Full Stack · Architecture logicielle · DevOps" },
   { title: "Bachelor 3 Informatique", school: "Ynov Campus — Montpellier", period: "2024 — 2025", detail: "Projets avancés · Management · Architecture système" },
   { title: "Bachelor 2 Informatique", school: "Ynov Campus — Montpellier", period: "2023 — 2024", detail: "Java · Mobile · IoT · UX Design · PHP · Unity · SQL" },
   { title: "Bachelor 1 Informatique", school: "Ynov Campus — Montpellier", period: "2022 — 2023", detail: "Go · Java · POO · Linux · Réseaux · Windows Server" },
@@ -76,7 +76,7 @@ export default function CV() {
               </div>
               <h1 className="text-xl font-extrabold text-white">Yanisse Ismaili</h1>
               <p className="text-violet-400 font-medium text-sm mt-1">Développeur Full Stack</p>
-              <p className="text-gray-500 text-xs mt-1 font-mono">Master 1 · Ynov Campus</p>
+              <p className="text-gray-500 text-xs mt-1 font-mono">Mastère 1 · Ynov Campus</p>
             </div>
 
             {/* Contact */}
@@ -150,7 +150,7 @@ export default function CV() {
             {/* À propos */}
             <Section label="À propos">
               <p className="text-gray-300 text-sm leading-relaxed">
-                Étudiant en Master 1 Informatique à Ynov Campus et mentor auprès des étudiants Bachelor 1 & 2.
+                Étudiant en Mastère 1 Informatique à Ynov Campus et mentor auprès des étudiants Bachelor 1 & 2.
                 J'enseigne le développement web, la cybersécurité, l'infrastructure et Linux. Passionné par le
                 Full Stack et l'IA générative, j'ai développé plusieurs projets allant d'applications web complètes
                 (React, NestJS, Docker) à des expériences interactives (Unity, borne d'arcade). Autodidacte,

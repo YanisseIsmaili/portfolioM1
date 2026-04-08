@@ -2,7 +2,7 @@ import { FiCalendar, FiMapPin, FiCode } from 'react-icons/fi'
 import FadeIn from './FadeIn'
 
 const stats = [
-  { icon: FiCalendar, label: "En formation", value: "Master 1" },
+  { icon: FiCalendar, label: "En formation", value: "Mastère 1" },
   { icon: FiMapPin, label: "Localisation", value: "France" },
   { icon: FiCode, label: "Spécialité", value: "Full Stack" },
 ]
@@ -34,7 +34,7 @@ export default function About() {
             <h2 className="section-title">Qui suis-je ?</h2>
 
             <p className="text-gray-400 leading-relaxed mb-4">
-              Étudiant en Master 1 en développement informatique, je suis passionné par la création
+              Étudiant en Mastère 1 en développement informatique, je suis passionné par la création
               d'applications web modernes. J'aime travailler aussi bien sur le frontend que le backend,
               en cherchant toujours à produire un code propre et maintenable.
             </p>
