@@ -65,13 +65,13 @@ export default function CV() {
       </div>
 
       <div className="max-w-5xl mx-auto px-6 py-12 print:p-0 print:max-w-none">
-        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] print:grid-cols-[240px_1fr] rounded-2xl overflow-hidden border border-gray-800 print:rounded-none print:border-0">
+        <div className="cv-wrap grid grid-cols-1 md:grid-cols-[280px_1fr] print:grid-cols-[240px_1fr] rounded-2xl overflow-hidden border border-gray-800 print:rounded-none print:border-0">
 
           {/* SIDEBAR */}
           <aside className="flex flex-col gap-6 p-8 print:p-6" style={{ background: '#160d2e' }}>
             {/* Photo + nom */}
             <div className="flex flex-col items-center text-center">
-              <div className="w-28 h-28 rounded-full overflow-hidden mb-4" style={{ border: '3px solid #7c3aed' }}>
+              <div className="cv-photo w-28 h-28 rounded-full overflow-hidden mb-4" style={{ border: '3px solid #7c3aed' }}>
                 <img src="/photo.png" alt="Yanisse Ismaili" className="w-full h-full object-cover object-top" />
               </div>
               <h1 className="text-xl font-extrabold text-white">Yanisse Ismaili</h1>
@@ -145,7 +145,7 @@ export default function CV() {
           </aside>
 
           {/* MAIN */}
-          <main className="p-8 print:p-6 flex flex-col gap-7" style={{ background: '#0f0e17' }}>
+          <main className="cv-gap p-8 print:p-6 flex flex-col gap-7" style={{ background: '#0f0e17' }}>
 
             {/* À propos */}
             <Section label="À propos">
@@ -216,10 +216,38 @@ export default function CV() {
       </div>
 
       <style>{`
-        @page { size: A4; margin: 10mm; }
+        @page { size: A4; margin: 0; }
+
         @media print {
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-          body { background: #0f0e17 !important; }
+
+          html, body { margin: 0; padding: 0; background: #0f0e17 !important; }
+
+          /* Force une seule page */
+          .cv-wrap { page-break-inside: avoid; }
+
+          /* Réduit les paddings */
+          aside  { padding: 14px !important; gap: 10px !important; }
+          main   { padding: 14px !important; gap: 12px !important; }
+
+          /* Réduit les espacements internes */
+          .cv-section  { margin-bottom: 8px !important; }
+          .cv-gap      { gap: 8px !important; }
+          .cv-gap-sm   { gap: 4px !important; }
+
+          /* Réduit les tailles de police */
+          h1   { font-size: 14px !important; }
+          h2   { font-size: 9px !important; }
+          h3   { font-size: 9.5px !important; }
+          p, li, span, div { font-size: 8px !important; line-height: 1.35 !important; }
+          .text-sm  { font-size: 8px !important; }
+          .text-xs  { font-size: 7.5px !important; }
+
+          /* Réduit photo */
+          .cv-photo { width: 72px !important; height: 72px !important; }
+
+          /* Supprime les marges de titre */
+          .cv-section-header { margin-bottom: 4px !important; }
         }
       `}</style>
     </div>
@@ -236,8 +264,8 @@ function SideTitle({ label }) {
 
 function Section({ label, children }) {
   return (
-    <div>
-      <div className="flex items-center gap-3 mb-4">
+    <div className="cv-section">
+      <div className="cv-section-header flex items-center gap-3 mb-4">
         <div className="flex-1 h-px" style={{ background: '#2d2150' }} />
         <span className="text-xs font-bold uppercase tracking-widest whitespace-nowrap" style={{ color: '#f97316' }}>{label}</span>
         <div className="flex-1 h-px" style={{ background: '#2d2150' }} />
