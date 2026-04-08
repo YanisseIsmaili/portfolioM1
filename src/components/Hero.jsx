@@ -1,5 +1,6 @@
 import { Link } from 'react-scroll'
-import { FiGithub, FiLinkedin, FiDownload } from 'react-icons/fi'
+import { Link as RouterLink } from 'react-router-dom'
+import { FiGithub, FiLinkedin, FiFileText } from 'react-icons/fi'
 import FloatingCode from './FloatingCode'
 
 export default function Hero() {
@@ -67,11 +68,11 @@ export default function Hero() {
               <FiLinkedin size={22} />
             </a>
             <span className="text-gray-700">|</span>
-            <a href="/cv.pdf" download
+            <RouterLink to="/cv"
               className="text-gray-500 hover:text-orange-400 transition-colors duration-200 flex items-center gap-1.5 text-sm">
-              <FiDownload size={16} />
-              Télécharger mon CV
-            </a>
+              <FiFileText size={16} />
+              Voir mon CV
+            </RouterLink>
           </div>
         </div>
       </div>
